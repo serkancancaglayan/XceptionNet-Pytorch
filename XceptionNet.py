@@ -37,6 +37,7 @@ class SeperableConvBlock(nn.Module):
         )    
         self.relu = nn.ReLU()
         self.use_relu = use_relu
+        
     def forward(self, x):
         return self.relu(self.conv_block(x)) if self.use_relu else self.conv_block(x)
     
